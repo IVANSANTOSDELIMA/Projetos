@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Formulario para jogos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background-image: linear-gradient( 120deg, rgb(16, 0, 43), rgb(114, 28, 163));
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+
+    }
+    .conteiner{
+      background-color: rgba(78, 30, 190, 0.9);
+      padding: 30px;
+      border-radius: 10px;
+      position: absolute;
+      width: 500px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+    }
+    select{
+          width: 100%;
+          padding: 10px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          outline: none;
+          font-size: 15px;
+          cursor: pointer;
+    }
+    
+    input[type=checkbox], label{
+      font-family:Arial, Helvetica, sans-serif;
+    }
+    input[type=submit]{
+      background-color: rgb(68, 8, 107);
+      outline: none;
+      border: none;
+      font-size: 15px;
+      padding: 10px;
+      width: 100%;
+      border-radius: 7px;
+      cursor: pointer;
+      color: white;
+    }
+    input[type=reset]{
+      border: none;
+      border-radius: 3px;
+      cursor:pointer;
+    }
+    input[type=submit]:hover{
+      background-color: rgb(41, 1, 73);
+      color:white;
+    }
+    input[type=reset]:hover{
+      background-color: rgb(241, 117, 117);
+      color:white;
+    }
+     legend{
+      border: 1px solid  rgb(95, 45, 124);
+      background-color: rgb(95, 45, 124);
+      text-align: center;
+      border-radius: 7px;
+      padding: 3px;
+
+      
+     }
+    fieldset{
+      border: 3px solid rgb(95, 45, 124);
+    }
+    .divtext{
+      position: relative;
+    }
+    .labelmuv{
+          background: none;
+          width: 100%;
+          border: none;
+          outline: none;
+          font-size: 15px;
+          cursor: pointer;
+          border-bottom: 1px solid rgb(255, 255, 255);
+          letter-spacing: 2px;
+          color: white;
+    }
+    .labelinput{
+       position: relative;
+       top: -20px;
+       left: 0px;
+       pointer-events: none;
+       transition: .5s;
+    }
+    .labelmuv:focus ~ .labelinput,
+    .labelmuv:valid ~ .labelinput{
+      top: -40px;
+      font-size: 12px;
+      color: rgb(131, 64, 170);
+    }
+    .divoption{
+      position: relative;
+    }
+    .escolhas{
+      position: relative;
+    }
+   </style>
+</head>
+<body>
+
+    <div class="conteiner">
+      
+      <form action="dadosenviados.html">
+        <fieldset>
+        <legend><b><p>Formulário de jogos</p></b></legend>
+      <div class="divtext"> 
+        <br>
+        <input type="text" id="tname" name="nome" class="labelmuv" required>
+        <label for="tname" class="labelinput">Nome</label>
+      </div>
+        <br>
+      <div class="divoption"> 
+        <label for="pais">País</label>
+        <br>
+        <select id="pais" name="País" required>
+          <option value="SulAmerica">SulAmérica</option>
+          <option value="NorteAmerica">NorteAmérica</option>
+          <option value="Europa">Europa</option>
+          <option value="Africa">África</option>
+          <option value="Asia">Ásia</option>
+          <option value="Oceania">Oceania</option>
+        </select>
+      </div>
+        <br>
+        <label><h3>Escolha seus jogos favoritos</h3></label>
+      <div class="escolhas">
+        <input type="checkbox" id="fjogo1" name="jogo1" value="jogos">
+        <label for="fjogo1" class="TIPOescolha">Fortnite</label>
+        <br>
+        <input type="checkbox" id="fjogo2" name="jogo2" value="jogos1">
+        <label for="fjogo2" class="TIPOescolha">Minecraft</label>
+        <br>
+        <input type="checkbox" id="fjogo3" name="jogo3" value="jogos2">
+        <label for="fjogo3" class="TIPOescolha">League of Legends</label>
+        <br>
+        <input type="checkbox" id="fjogo4" name="jogo4" value="jogos3">
+        <label for="fjogo4" class="TIPOescolha">mário cart</label>
+      </div>
+      <div>
+        <br>
+        <label><h3>plataforma preferida</h3></label>
+        <label for="Sescolha0">Mobile</label>
+        <input type="radio" name="tipo" id="Sescolha0" value="Mobile"required>
+        <label for="Sescolha1">PC</label>
+        <input type="radio" id="Sescolha1" name="tipo" value="PC" required>
+      </div>
+        <br><br>
+      <div>
+        <input type="submit" value="Enviar">
+      </div>
+        <br><br>
+      <div>
+        <input type="reset" value="Limpar">
+      </div>
+
+
+        </fieldset>
+      </form>
+    </div>
+</body>
+</html>
